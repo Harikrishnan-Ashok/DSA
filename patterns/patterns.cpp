@@ -122,6 +122,61 @@ void revChrisTree(int size)
 	}
 }
 
+void rombus(int size)
+{
+	cout<<"\n 9. the diamond \n";
+	int i;
+	for(int k=(size-1);k>=0;k--)
+	{
+		int sp=0;
+		for( i=0;i<(k);i++)
+		{
+			cout<<" ";
+			sp++;
+		}
+		for(int j=0;j<2*(size-i)-1;j++)
+		{
+			cout<<"*";
+		}
+		cout<<"\n";
+	}
+	for(int i=0;i<size;i++)
+	{
+		int sp=0;
+		for(int j=0;j<i;j++)
+		{
+			cout<<" ";
+			sp++;
+		}
+		for(int j=0;j<2*(size-sp)-1;j++)
+		{
+			cout<<"*";
+		}
+		cout<<"\n";
+	}
+}
+
+void halfD(int size)
+{
+	cout<<"\n11.Half Diamond\n"
+	int i;
+	for(i=1;i<=size;i++)
+	{
+		for(int j=0;j<i;j++)
+		{
+			cout<<"*";
+		}
+		cout<<endl;
+	}
+	for(i=0;i<size;i++)
+	{
+		for(int j=(size-1);j>i;j--)
+		{
+			cout<<"*";
+		}
+		cout<<endl;
+	}
+}
 
 int main(){
 	
@@ -136,4 +191,6 @@ int main(){
 	revNumbers(size);
 	chrisTree(size);
 	revChrisTree(size);
+	rombus(size);
+	halfD(size);
 return 0;}

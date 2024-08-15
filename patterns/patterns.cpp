@@ -158,7 +158,7 @@ void rombus(int size)
 
 void halfD(int size)
 {
-	cout<<"\n11.Half Diamond\n"
+	cout<<"\n10.Half Diamond\n";
 	int i;
 	for(i=1;i<=size;i++)
 	{
@@ -173,6 +173,54 @@ void halfD(int size)
 		for(int j=(size-1);j>i;j--)
 		{
 			cout<<"*";
+		}
+		cout<<endl;
+	}
+}
+
+	void numberPyramid(int size)
+{
+	cout<<"\n11.Number Pyramid\n";
+	int p;
+	for(int k=0;k<size;k++)
+	{
+		if(k%2==0){p=1;}
+		else{p=0;}
+		for(int i=0;i<=k;i++)
+		{
+			cout<<p<<" ";
+			if(p==1){p=0;}
+			else{p=1;}
+		}
+		cout<<"\n";
+	}
+}
+
+void numberCone(int size)
+{
+	cout<<"\n12. Number Cone \n";
+	for(int k=1;k<size;k++)
+	{
+		for(int i=1;i<=k;i++){cout<<i;}
+		for(int j=0;j<(2*(size-k))-2;j++)
+		{	
+			cout<<" ";
+		}
+		for(int i=k;i>=1;i--){cout<<i;}
+		cout<<"\n";
+	}
+}
+
+void numberStairs(int size)
+{
+	cout<<"\n13. Number Stais\n";
+	int var=1;
+	for(int k=0;k<size;k++)
+	{
+		for(int i=0;i<=k;i++)
+		{
+			cout<<var<<" ";
+			var++;
 		}
 		cout<<endl;
 	}
@@ -193,4 +241,7 @@ int main(){
 	revChrisTree(size);
 	rombus(size);
 	halfD(size);
+	numberPyramid(size);
+	numberCone(size);
+	numberStairs(size);
 return 0;}

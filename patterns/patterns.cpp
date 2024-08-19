@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 using namespace std;
 
 void brickofStars(int size)
@@ -226,6 +227,109 @@ void numberStairs(int size)
 	}
 }
 
+void alphaStairs(int size)
+{
+	cout<<"\n14. Alphabet Stairs\n";
+	string alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	for (int i=1;i<=size;i++)
+	{
+		for(int j=0;j<i;j++)
+		{
+			cout<<alpha[j]<<" ";
+		}
+		cout<<endl;
+	}
+}
+
+void alphaDecStairs(int size)
+{
+	cout<<"\n15. Alphabet DEC Stairs";
+	string alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	for (int i=size;i>=0;i--)
+	{
+		cout<<endl;
+		for(int j=0;j<i;j++)
+		{
+			cout<<alpha[j]<<" ";
+		}
+	}
+}
+
+void alphaSameStairs(int size)
+{
+	cout<<"\n16. Alphabet DEC Stairs\n";
+	string alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	for (int i=0;i<=size;i++)
+	{
+		for(int j=0;j<i;j++)
+		{
+			cout<<alpha[i-1]<<" ";
+		}
+		cout<<endl;
+	}
+}
+
+void test(int size)
+{
+	int n=size;
+	cout<<"\n1. Alphabet DEC Stairs\n";
+	 for(int i=1;i<2*n;i++){
+          for(int j =1;j<i+1;j++){
+              if(i>n){
+                //   int number = 2*n-i;
+                  for(int k = 1;k<=(2*n)-i;k++)
+                  {
+
+                      cout<<"*";
+                  }
+				  break;
+                }
+                else{
+                cout<<"*";
+
+            }
+          }
+          cout<<"\n";
+        }
+}
+
+void alphaPyramid(int size){
+	string alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	cout<<"\n17. Alphabet Pyramid\n";
+	int k=0;
+	for(int i=0;i<size;i++)
+	{
+		for(int j=1;j<(size-i);j++)
+		{
+			cout<<" ";
+		}
+		for(;k<=i;k++)
+		{
+			cout<<alpha[k];
+		}
+		k=k-1;
+		for(;k>0;k--)
+		{
+			cout<<alpha[k-1];
+		}
+		cout<<"\n";
+	}
+}
+
+void revAlpha(int size){
+	string alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	cout<<"\n18.revAlphabets Stairs\n";
+	for(int k=0;k<=size;k++)
+	{
+		for(int i=0;i<k;i++)
+		{
+			cout<<alpha[(size-1)-i]<<" ";
+		}
+		cout<<endl;
+			
+	}
+}
+
 int main(){
 	
 	int size;
@@ -244,4 +348,10 @@ int main(){
 	numberPyramid(size);
 	numberCone(size);
 	numberStairs(size);
+	alphaStairs(size);
+	alphaDecStairs(size);
+	alphaSameStairs(size);
+	/* test(size); */
+	alphaPyramid(size);
+	revAlpha(size);
 return 0;}

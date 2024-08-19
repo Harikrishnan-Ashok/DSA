@@ -330,28 +330,71 @@ void revAlpha(int size){
 	}
 }
 
+void hole(int size){
+	int sp=0;
+	for(int k=0;k<size;k++)
+	{
+		cout<<"\n";
+		for(int i=0;i<(size-k);i++)
+		{
+			cout<<"*";
+		}
+
+		for(int i=0;i<2*k;i++)
+		{
+			cout<<" ";
+		}
+
+		for(int i=0;i<(size-k);i++)
+		{
+			cout<<"*";
+		}
+	}
+	for(int k=size;k>=0;k--)
+	{
+		for(int i=0;i<(size-k);i++)
+		{
+			cout<<"*";
+		}
+
+		for(int i=0;i<2*k;i++)
+		{
+			cout<<" ";
+		}
+
+		for(int i=0;i<(size-k);i++)
+		{
+			cout<<"*";
+		}
+		cout<<"\n";
+	}
+
+}
+
 int main(){
 	
 	int size;
 	cout<<"input the number: ";
 	cin>>size;
-	brickofStars(size); 
-	descStars(size);
-	descNumber(size);
-	descNumberFixed(size);
-	revStars(size);
-	revNumbers(size);
-	chrisTree(size);
-	revChrisTree(size);
-	rombus(size);
-	halfD(size);
-	numberPyramid(size);
-	numberCone(size);
-	numberStairs(size);
-	alphaStairs(size);
-	alphaDecStairs(size);
-	alphaSameStairs(size);
-	/* test(size); */
-	alphaPyramid(size);
-	revAlpha(size);
+	/* brickofStars(size); */ 
+	/* descStars(size); */
+	/* descNumber(size); */
+	/* descNumberFixed(size); */
+	/* revStars(size); */
+	/* revNumbers(size); */
+	/* chrisTree(size); */
+	/* revChrisTree(size); */
+	/* rombus(size); */
+	/* halfD(size); */
+	/* numberPyramid(size); */
+	/* numberCone(size); */
+	/* numberStairs(size); */
+	/* alphaStairs(size); */
+	/* alphaDecStairs(size); */
+	/* alphaSameStairs(size); */
+	/* /1* test(size); *1/ */
+	/* alphaPyramid(size); */
+	/* revAlpha(size); */
+	/* hole(size); */
+	/* butterfly(size) */
 return 0;}

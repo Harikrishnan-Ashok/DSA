@@ -25,7 +25,7 @@ void descStars(int size)
 			cout<<"*";
 		}
 		cout<<"\n";
-	}
+}
 }
 
 void descNumber(int size)
@@ -371,6 +371,29 @@ void hole(int size){
 
 }
 
+void rectangle(int size){
+	cout<<"\n20. Rectangle\n";
+	int sp;
+	for(int i=0;i<size;i++)
+	{
+		sp=(i==0||i==size-1)? 0:size-2;
+		if(sp==0)
+		{
+			for(int j=0;j<size;j++)
+				cout<<"*";
+		}
+		else
+		{
+			cout<<"*";
+			for(int j=0;j<sp;j++)
+				cout<<" ";
+			cout<<"*";
+		}
+		cout<<"\n";
+
+	}
+}
+
 int main(){
 	
 	int size;
@@ -397,4 +420,5 @@ int main(){
 	/* revAlpha(size); */
 	/* hole(size); */
 	/* butterfly(size) */
+	rectangle(size);
 return 0;}
